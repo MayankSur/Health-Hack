@@ -1,0 +1,74 @@
+{
+    "VitaminA": {
+        "child": {
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        },
+        "adult":{
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        }
+    },
+    "VitaminB": {
+        "child": {
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        },
+        "adult":{
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        }
+    },
+    "VitaminC": {
+        "child": {
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        },
+        "adult":{
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        }
+    },
+    "VitaminD": {
+        "child": {
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        },
+        "adult":{
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        }
+    },
+    "Iron": {
+        "child": {
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        },
+        "adult":{
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        }
+    },
+    "Manganese": {
+        "child": {
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        },
+        "adult":{
+            "Upper": 0,
+            "Lower": 0,
+            "Average": 0
+        }
+    }
+}
