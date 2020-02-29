@@ -5,9 +5,12 @@ from flask import jsonify
 from flask_cors import CORS, cross_origin
 import urllib.request
 import urllib.parse
-import json
 from bs4 import BeautifulSoup
 
+boundaries = None
+
+with open('boundaries.json', 'r') as f:
+    boundaries = json.load(f)
 
 app = Flask(__name__)
 # Allows for cross platform communication
@@ -26,6 +29,8 @@ def incoming_request():
     if request.method == 'POST':
         print(request.json, file=sys.stderr)
         # Here we print the data coming from the request
+        # Running Tests
+        benchmarking(boundaries, request.json)
         return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
     else:
         # Need to create a correct error message
@@ -33,9 +38,9 @@ def incoming_request():
         return jsonify(success=False)
 
 
-blood_data = {"patient": {"patientName": "Chiddy", "patientID": 1, "patientAge": 15, "patientGender": "male"}, "vitamins-and-minerals": {"Vitamin A": 8, "Vitamin B" : 3.51, "Vitamin C": 1.01}}
+# blood_data = {"patient": {"patientName": "Chiddy", "patientID": 1, "patientAge": 15, "patientGender": "male"}, "vitamins-and-minerals": {"Vitamin A": 8, "Vitamin B" : 3.51, "Vitamin C": 1.01}}
 
-        
+
 def call_api(api, condition_category_1, condition_category_2):
 
 
@@ -92,8 +97,10 @@ def call_api(api, condition_category_1, condition_category_2):
 def benchmarking(lut, data):
     v_m = data["vitamins-and-minerals"]
     patient_details = data["patient"]
+
+    print(patient_details)
     
-    if patient_details["age"] < 18:
+    if int(patient_details["patientAge"]) < 18:
         person = "child"
     else:
         person = "adult"
@@ -101,10 +108,10 @@ def benchmarking(lut, data):
     for item in v_m:
         #3 three cases
         #case 1 the value is normal i.e. between lower and upper bound
-        if boundaries["vitamins-and-minerals"][item][person][patient_details["gender"]]["lower"] <= v_m[item] <= boundaries["vitamins-and-minerals"][item][person][patient_details["gender"]]["upper"]:
+        if boundaries["vitamins-and-minerals"][item][person][patient_details["patientGender"]]["lower"] <= float(v_m[item]) <= boundaries["vitamins-and-minerals"][item][person][patient_details["patientGender"]]["upper"]:
             print("Normal")
         #case 2, 3 the value is abnormal i.e. less than lower or higher than upper
-        if boundaries["vitamins-and-minerals"][item][person][patient_details["gender"]]["lower"] >= v_m[item] or v_m[item] >= boundaries["vitamins-and-minerals"][item][person][patient_details["gender"]]["upper"]:
+        if boundaries["vitamins-and-minerals"][item][person][patient_details["patientGender"]]["lower"] >= float(v_m[item]) or float(v_m[item]) >= boundaries["vitamins-and-minerals"][item][person][patient_details["patientGender"]]["upper"]:
             item = item.replace(" ", "+")
             output = call_api("search", "vitamins-and-minerals", item)
 #            for v in output:
@@ -126,5 +133,4 @@ def benchmarking(lut, data):
     
     return "Done"
 
-benchmarking(boundaries, blood_data)
     

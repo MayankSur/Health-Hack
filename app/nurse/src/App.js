@@ -9,6 +9,8 @@ class App extends React.Component {
     this.state = {
       patientName: '',
       patientID: null,
+      patientAge: '',
+      patientGender: null,
       VitaminA: '',
       VitaminB: null,
       VitaminC: '',
@@ -37,8 +39,8 @@ class App extends React.Component {
         "patient": {
           "patientName": this.state.patientName,
           "patientID": this.state.patientID,
-          "patientAge": this.state.patientName,
-          "patientGender": this.state.patientName,
+          "patientAge": this.state.patientAge,
+          "patientGender": this.state.patientGender,
         },
         "vitamins-and-minerals": {
           "Vitamin A": this.state.VitaminA,
@@ -74,13 +76,13 @@ class App extends React.Component {
         <p>Patient Age:</p>
         <input
           type='text'
-          name='patientID'
+          name='patientAge'
           onChange={this.myChangeHandler}
         />
         <p>Patient Gender:</p>
         <input
           type='text'
-          name='patientID'
+          name='patientGender'
           onChange={this.myChangeHandler}
         />
         <p>Vitamin A Level:</p>
