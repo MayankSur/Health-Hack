@@ -24,11 +24,29 @@ class App extends React.Component {
     e.preventDefault();
     console.log('The link was clicked.');
     // Insert Push Request Here
-    // axios.get(`https://jsonplaceholder.typicode.com/users`)
+    // axios.get(`http://127.0.0.1:5000/incoming_request`)
     // .then(res => {
     //   const persons = res.data;
     //   this.setState({ persons });
     // })
+
+    axios({
+      method: 'post',
+      url: `http://127.0.0.1:5000/incoming_request`,
+      data:{
+        patientName: this.state.patientName,
+        patientID: this.state.patientID,
+        VitaminA: this.state.VitaminA,
+        VitaminB: this.state.VitaminB,
+        VitaminC: this.state.VitaminC,
+      }
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   render() {
@@ -65,6 +83,25 @@ class App extends React.Component {
         name='VitaminC'
         onChange={this.myChangeHandler}
       />
+      <p>Vitamin D Level:</p>
+      <input
+        type='text'
+        name='VitaminD'
+        onChange={this.myChangeHandler}
+      />
+      <p>Iron Level:</p>
+      <input
+        type='text'
+        name='Iron'
+        onChange={this.myChangeHandler}
+      />
+      <p>Manganese Level:</p>
+      <input
+        type='text'
+        name='Manganese'
+        onChange={this.myChangeHandler}
+      />
+
 
       <br />
 
