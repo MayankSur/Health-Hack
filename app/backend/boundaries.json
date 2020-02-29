@@ -1,74 +1,82 @@
-{
-    "VitaminA": {
-        "child": {
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
+boundaries = {
+  "vitamins-and-minerals": {
+    "Vitamin A": {
+      "child": {
+        "male": {
+          "upper": 6,
+          "lower": 5,
+          "average": 5.5
         },
-        "adult":{
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
+        "female": {
+          "upper": 5,
+          "lower": 4,
+          "average": 4.5
         }
+      },
+      "adult": {
+        "male": {
+          "upper": 6,
+          "lower": 5,
+          "average": 5.5
+        },
+        "female": {
+          "upper": 5,
+          "lower": 4,
+          "average": 4.5
+        }
+      }
     },
-    "VitaminB": {
-        "child": {
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
+    "Vitamin B": {
+      "child": {
+        "male": {
+          "upper": 4,
+          "lower": 3,
+          "average": 3.5
         },
-        "adult":{
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
+        "female": {
+          "upper": 5,
+          "lower": 4,
+          "average": 4.5
         }
+      },
+      "adult": {
+        "male": {
+          "upper": 6,
+          "lower": 5,
+          "average": 5.5
+        },
+        "female": {
+          "upper": 5,
+          "lower": 4,
+          "average": 4.5
+        }
+      }
     },
-    "VitaminC": {
-        "child": {
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
+    "Vitamin C": {
+      "child": {
+        "male": {
+          "upper": 0,
+          "lower": 3,
+          "average": 3.5
         },
-        "adult":{
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
+        "female": {
+          "upper": 5,
+          "lower": 4,
+          "average": 4.5
         }
-    },
-    "VitaminD": {
-        "child": {
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
+      },
+      "adult": {
+        "male": {
+          "upper": 6,
+          "lower": 5,
+          "average": 5.5
         },
-        "adult":{
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
+        "female": {
+          "upper": 5,
+          "lower": 4,
+          "average": 4.5
         }
-    },
-    "Iron": {
-        "child": {
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
-        },
-        "adult":{
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
-        }
-    },
-    "Manganese": {
-        "child": {
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
-        },
-        "adult":{
-            "Upper": 0,
-            "Lower": 0,
-            "Average": 0
-        }
+      }
     }
+  }
 }
