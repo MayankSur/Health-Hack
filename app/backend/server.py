@@ -27,4 +27,7 @@ def incoming_request():
         # Need to create a correct error message
         #error = 'Invalid username/password'
         return jsonify(success=False)
-    
+
+
+# def process_request(json_incoming):
+#     # Need to process the incoming JSON based on bounds
