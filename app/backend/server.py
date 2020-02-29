@@ -128,14 +128,3 @@ def benchmarking(lut, data):
 
 benchmarking(boundaries, blood_data)
     
-
-#request_headers = {
-#  "subscription-key": subscriptionKey,
-#  "Accept": "application/json",
-#  "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0"
-#}
-# 
-#request = urllib.request.Request(pageURL, headers=request_headers)
-#contents = urllib.request.urlopen(request).read()
-#parsed_content = json.loads(contents)
-
