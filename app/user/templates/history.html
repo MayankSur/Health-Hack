@@ -1,0 +1,35 @@
+{% extends "index1.html" %}
+ {% block title %}History{% endblock %}
+ {% block head %}
+ <h1>Log book of blood tests</h1>
+ {% endblock %}
+ {% block footer %}
+<div class="w3-container">
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+      <tr>
+        <td><b>Test Number</b></td>
+        <td><b>Date</b></td>
+      </tr>
+      <tr>
+        <td> <a href="/tests">Test 1</a></td>
+        <td>25/02/2020</td>
+      </tr>
+      <tr>
+         <td> <a href="/tests">Test 2</a></td>
+        <td>13/06/2019</td>
+      </tr>
+      <tr>
+         <td> <a href="/tests">Test 3</a></td>
+        <td>03/12/2018</td>
+      </tr>
+      <tr>
+        <td> <a href="/tests">Test 4</a></td>
+        <td>15/04/2018</td>
+      </tr>
+      <tr>
+        <td> <a href="/tests">Test 5</a></td>
+        <td>10/11/2017</td>
+      </tr>
+    </table><br>
+  </div>
+{%endblock%}

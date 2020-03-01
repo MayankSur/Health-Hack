@@ -1,6 +1,26 @@
 {% extends "base1.html" %}
 {% block title %}Login Page{% endblock %}
 {% block content %}
+<style>
+  .button{
+  background-color: #f0f0f0; /* Green */
+  color: black;
+  padding: 1px 10px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+}
+    .button:hover{
+  background-color: #005eb8; /* Green */
+  color: white;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
 <br>
 <br>
 <div style="text-align:center">
@@ -8,8 +28,8 @@
       <p>Name:</p>	
       <p><input type="text" name="nm" /></p>
       <p>Password:</p>  
-      <p><input type="text" name="ps" /></p>
-      <p><input type="submit" value="Submit" /></p>
+      <p><input type="password" name="ps" /></p>
+      <p><input type="submit" value="Submit" class="button" /></p>
     </form>
     {% with messages=get_flashed_messages() %}
          {% if messages %}

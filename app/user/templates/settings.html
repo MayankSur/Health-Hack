@@ -1,10 +1,85 @@
 {% extends "index1.html" %}
-{% block title %}Settings Page{% endblock %}
+{% block title %}Settings{% endblock %}
 {% block head %}<h1> Settings</h1>{% endblock %}
 {% block footer %}
-<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Change Password</a>
+<style>
+	.button1{
+  background-color: #f0f0f0; /* Green */
+  color: black;
+  padding: 1px 10px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+}
+    .button1:hover{
+  background-color: #005eb8; /* Green */
+  color: white;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+  	.button2{
+  background-color: #f0f0f0; /* Green */
+  color: black;
+  padding: 1px 10px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+}
+    .button2:hover{
+  background-color: #005eb8; /* Green */
+  color: white;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}	.button3{
+  background-color: #f0f0f0; /* Green */
+  color: black;
+  padding: 1px 10px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+}
+    .button3:hover{
+  background-color: #005eb8; /* Green */
+  color: white;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    .button4{
+  background-color: #f0f0f0; /* Green */
+  color: black;
+  padding: 1px 10px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+}
+    .button4:hover{
+  background-color: #005eb8; /* Green */
+  color: white;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+<a href="#" class="button1" role="button" aria-pressed="true">Change Password</a>
 <br>
-<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Help</a>
+<a href="#" class="button2" role="button" aria-pressed="true">Help</a>
 <br>
-<a href="/logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Log out</a>
+<a href="#" class="button4" role="button" aria-pressed="true">Export medical data</a>
+<br>
+<a href="/logout" class="button3" role="button" aria-pressed="true">Log out</a>
 {% endblock %}
