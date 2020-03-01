@@ -30,7 +30,9 @@ def incoming_request():
         print(request.json, file=sys.stderr)
         # Here we print the data coming from the request
         # Running Tests
-        benchmarking(boundaries, request.json)
+        output = benchmarking(boundaries, request.json)
+        print(output)
+        
         return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
     else:
         # Need to create a correct error message
@@ -38,7 +40,7 @@ def incoming_request():
         return jsonify(success=False)
 
 
-blood_data = {"patient": {"patientName": "Chiddy", "patientID": 1, "patientAge": 15, "patientGender": "male"}, "vitamins-and-minerals": {"Vitamin A": 8, "Vitamin B" : 3.51, "Vitamin C": 1.01}}
+#blood_data = {"patient": {"patientName": "Chiddy", "patientID": 1, "patientAge": 15, "patientGender": "male"}, "vitamins-and-minerals": {"Vitamin A": 8, "Vitamin B" : 3.51, "Vitamin C": 1.01}}
 
 
 
@@ -102,7 +104,7 @@ def benchmarking(lut, data):
     else:
         person = "adult"
         
-    result = {"good":[], "bad":[]}
+    result = {"ppi": patient_details ,"good":[], "bad":[]}
     
     for item in v_m:
         #3 three cases
@@ -145,3 +147,5 @@ def benchmarking(lut, data):
     return json.dumps(result)
 
     
+if __name__=="__main__":
+     app.run(debug=True)

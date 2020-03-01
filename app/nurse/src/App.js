@@ -79,7 +79,7 @@ class App extends React.Component {
           name='patientAge'
           onChange={this.myChangeHandler}
         />
-        <p>Patient Gender:</p>
+        <p>Patient Gender: (male/female)</p>
         <input
           type='text'
           name='patientGender'
@@ -103,7 +103,7 @@ class App extends React.Component {
           name='VitaminC'
           onChange={this.myChangeHandler}
         />
-        <p>Vitamin D Level:</p>
+        {/* <p>Vitamin D Level:</p>
         <input
           type='text'
           name='VitaminD'
@@ -120,8 +120,7 @@ class App extends React.Component {
           type='text'
           name='Manganese'
           onChange={this.myChangeHandler}
-        />
-
+        /> */}
 
         <br />
 
